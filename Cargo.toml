@@ -1,0 +1,29 @@
+[package]
+name = "calm_io"
+version = "0.1.0"
+authors = [
+	"myrrlyn <self@myrrlyn.dev>",
+]
+edition = "2018"
+categories = [
+	"command-line-interface",
+]
+description = "Calms a panicky I/O stream."
+documentation = "https://docs.rs/calm_io"
+homepage = "https://myrrlyn.net/crates/calm_io"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myrrlyn/calm_io"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+calmio_filters = "0.1"
+
+[workspace]
+members = [
+	"filters",
+]
+
+[patch.crates-io.calmio_filters]
+path = "filters"

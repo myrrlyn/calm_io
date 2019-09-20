@@ -1,0 +1,32 @@
+# Manifest for the `calmio_filters` crate. This crate is not public API.
+
+[package]
+name = "calmio_filters"
+version = "0.1.0"
+authors = [
+	"myrrlyn <self@myrrlyn.dev>",
+]
+edition = "2018"
+categories = [
+	"command-line-interface",
+]
+description = "Calms a panicky I/O stream."
+documentation = "https://docs.rs/calm_io"
+homepage = "https://myrrlyn.net/crates/calm_io"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/myrrlyn/calm_io"
+
+[lib]
+proc-macro = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quote = "1"
+
+[dependencies.syn]
+version = "1"
+features = [
+	"full",
+]
