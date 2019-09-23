@@ -27,7 +27,7 @@ macro_rules! stderr {
     ( $( $t:tt )* ) => {{
         use std::io::Write;
         let stderr = std::io::stderr();
-        let mut lock = stdout.lock();
+        let mut lock = stderr.lock();
         write!(lock, $( $t )*)
     }}
 }
@@ -37,7 +37,7 @@ macro_rules! stderrln {
     ( $( $t:tt )* ) => {{
         use std::io::Write;
         let stderr = std::io::stderr();
-        let mut lock = stdout.lock();
+        let mut lock = stderr.lock();
         writeln!(lock, $( $t )*)
     }}
 }
