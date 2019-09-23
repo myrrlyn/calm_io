@@ -37,8 +37,9 @@ miri:
 	cargo +nightly miri test
 
 publish: test doc
-	cargo package # no --allow-dirty this time
-	cargo publish -p calmio_filters
+	# no --allow-dirty this time
+	cargo package
+	just filters/publish
 	cargo publish
 
 # Runs the test suite.
