@@ -23,6 +23,9 @@ anywhere you see my name, it’s *probably* me and I’ll *probably* respond to 
 Be able to make a Rust project compile.
 
 Be comfortable using `U+0009 CHARACTER TABULATION` as your indentation setting.
+Please use `just format` or, if you do not have Just installed,
+`cargo +nightly fmt -- --config-path rustfmt-nightly.toml` before submitting a
+PR.
 
 ## Contributing
 

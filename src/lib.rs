@@ -40,7 +40,7 @@ Take your function that returns `io::Result`:
 
 ```rust,ignore
 fn main() -> io::Result<()> {
-    stdoutln!("Hello!")?;
+  stdoutln!("Hello!")?;
 }
 ```
 
@@ -49,7 +49,7 @@ and add one attribute to it:
 ```rust,ignore
 #[calm_io::pipefail] // <- this attribute
 fn main() -> io::Result<()> {
-    stdoutln!("Hello, but calmly!")?;
+  stdoutln!("Hello, but calmly!")?;
 }
 ```
 

@@ -11,11 +11,11 @@ use calm_io::*;
 
 #[pipefail]
 fn main() -> std::io::Result<()> {
-    let mut text = std::env::args().skip(1).collect::<Vec<_>>().join(" ");
-    if text.trim().is_empty() {
-        text = "y".to_owned();
-    }
-    loop {
-        stdoutln!("{}", text)?;
-    }
+	let mut text = std::env::args().skip(1).collect::<Vec<_>>().join(" ");
+	if text.trim().is_empty() {
+		text = "y".to_owned();
+	}
+	loop {
+		stdoutln!("{}", text)?;
+	}
 }

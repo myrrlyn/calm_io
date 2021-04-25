@@ -28,6 +28,9 @@ doc: check
 examples: test
 	cargo run --example good_yes | head > /dev/null
 
+format:
+	cargo +nightly fmt -- --config-path rustfmt-nightly.toml
+
 # Runs a Justfile recipe on every change to the workspace.
 loop action:
 	cargo watch -s "just {{action}}"
